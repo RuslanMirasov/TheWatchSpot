@@ -42,13 +42,17 @@
    opacity: 0;
    transform: translate(0px, 10px);
 }
+/*  добавив відступи самої модалки */
+.popup {
+   padding: 40px 20px 22px;
+}
 .modal .popup__body {
    width: 100%;
    min-height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 18px;
+   /* padding: 18px; */
    position: relative;
 }
 .modal .popup {
