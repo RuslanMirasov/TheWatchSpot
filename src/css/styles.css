@@ -18,6 +18,7 @@
 @import url('./section_sale.css');
 @import url('./footer.css');
 @import url('./popup.css');
+@import url('./modal.css');
 
 :root {
    --white-color: #ffffff;
