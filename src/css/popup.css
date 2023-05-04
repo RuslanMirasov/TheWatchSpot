@@ -46,13 +46,14 @@
 .popup {
    padding: 40px 20px 22px;
 }
+
 .modal .popup__body {
    width: 100%;
    min-height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
-   /* padding: 18px; */
+   padding: 18px;
    position: relative;
 }
 .modal .popup {
@@ -152,4 +153,23 @@
 .rotate-animation {
    -webkit-animation: 4s linear 0s infinite rotate;
    animation: 4s linear 0s infinite rotate;
+}
+
+@media screen and (min-width: 768px) {
+   .modal .popup__body {
+      padding: 12px;
+   }
+
+   .popup {
+      padding: 40px;
+   }
+}
+@media screen and (min-width: 1280px) {
+   .modal .popup__body {
+      padding: 188px;
+   }
+
+   .popup {
+      padding: 40px;
+   }
 }
