@@ -1,15 +1,15 @@
 /* ====================альбомчик================ */
 .parent {
     display: grid;
-    grid-template-columns: 80px 235px;
-    grid-template-rows: repeat(4, 80px);
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
+    grid-template-columns: 23.885% 70.15%;
+    grid-template-rows: repeat(4, 22.76%);
+    grid-column-gap: 5.965%;
+    grid-row-gap: 2.98%;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 .sale-main-img {
-    height: 350px;
+  max-height: 350px;
 }
 .div1 {
     grid-area: 1 / 1 / 2 / 2;
@@ -74,7 +74,10 @@ color: rgba(20, 20, 20, 0.5);
     position: relative;
     margin-top: 40px;
 }
+
 .sale-description {
+    padding-top: 8px;
+width: 100%;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
@@ -83,20 +86,19 @@ letter-spacing: -0.02em;
 text-transform: uppercase;
 color: #141414;
 margin-bottom: 17px;
+border-top: 1px solid #141414;
 }
 .sale-description::after {
     content: "";
+    width: 16px;
     position: absolute;
-    left: 0px;
-    top: -7px;
-    width: 100%;
+    right: 0px;
+    top: 12px;
     height: 1px;
     border-radius: 2px;
     background-color: #141414;
 }
-.sale-svg {
-    background-color: #141414;
-}
+
 .sale-pharagraf {
 font-style: normal;
 font-weight: 400;
@@ -119,8 +121,8 @@ color: rgba(20, 20, 20, 0.5);
    
     }
     .sale-main-img {
-        height: 614px;
-        width: 406px;
+        max-height: 614px;
+        max-width: 406px;
     }
     .sale-name-watch {
         font-size: 38px;
