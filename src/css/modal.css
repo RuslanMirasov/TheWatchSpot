@@ -1,0 +1,78 @@
+.modal-container {
+    padding: 66px 20px 40px 20px;
+}
+.modal-photo {
+padding-top: 26px;
+padding-bottom: 25px;
+margin-left: auto;
+margin-right: auto;
+}
+.modal-name-watch {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #141414;
+    margin-top: 14px;
+}
+.modal-price-watch {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: rgba(20, 20, 20, 0.5);
+    margin-top: 4px;
+    margin-bottom: 40px;
+}
+.name-modal-input {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #141414;
+    margin-bottom: 12px;
+}
+.modal-input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
+    padding: 16px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(20, 20, 20, 0.5);
+    margin-bottom: 18px;
+}
+
+.modal-textarea {
+    resize: none;
+    height: 170px;
+    margin-bottom: 20px;
+}
+.button-modal {
+    width: 100%;
+    margin-bottom: 12px;
+}
+.modal-text-policy{
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: -0.02em;
+color: rgba(20, 20, 20, 0.4);
+}
+.modal-link-policy {
+ text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+    .popup {
+        display: flex;
+        gap: 20px;
+       
+    }
+   .modal-second-modal {
+    width: 368px;
+   }
+}
+@media screen and (min-width: 1280px) {
+    .popup {
+        gap: 40px;
+    }
+        .modal-second-modal {
+            width: 508px;}
+}
