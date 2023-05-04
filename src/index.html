@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
-    <main class="main"></main>
-    <load ="partials/footer.html" />
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>The Watch spot</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="./css/styles.css" />
+   </head>
+   <body class="body">
+      <load src="partials/preloader.html" />
+      <load src="partials/header.html" />
+      <main class="main">
+         <load src="partials/section_hero.html" />
+         <load src="partials/section_about-us.html" />
+         <load src="partials/section_catalog.html" />
+         <load src="partials/section_new-watches.html" />
+         <load src="partials/section_sale.html" />
+      </main>
+      <load src="partials/footer.html" />
+      <load src="partials/popup.html" />
 
-    <script type="module" src="/scripts.js"></script>
-  </body>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script type="module" src="js/scripts.js"></script>
+   </body>
 </html>

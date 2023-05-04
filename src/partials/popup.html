@@ -1,0 +1,33 @@
+<!-- backdrop -->
+<div class="backdrop is-hidden"></div>
+
+<!-- REQUEST -->
+<div class="modal is-hidden" id="request">
+   <div class="popup__body">
+      <button type="button" class="close-area" data-popup-close></button>
+      <load src="partials/modal.html" />
+   </div>
+</div>
+
+<!-- LOADING -->
+<div class="modal is-hidden" id="loading">
+   <div class="popup__body">
+      <div class="popup"></div>
+   </div>
+</div>
+
+<!-- OK -->
+<div class="modal is-hidden" id="ok">
+   <div class="popup__body">
+      <button type="button" class="close-area" data-popup-close></button>
+      <div class="popup">
+         <button class="popup__close" data-popup-close>
+            <svg width="24" height="24">
+               <use href="./img/icons.svg#popup_close"></use>
+            </svg>
+         </button>
+         <b>Form was sended!</b>
+         <p>thank you for your massege.</p>
+      </div>
+   </div>
+</div>

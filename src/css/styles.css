@@ -4,21 +4,44 @@
   | default @import url()
   |============================
 */
+
+@import url('./normalize.css');
+@import url('./fonts.css');
 @import url('./reset.css');
+@import url('./buttons.css');
+@import url('./preloader.css');
 @import url('./header.css');
+@import url('./section_hero.css');
+@import url('./section_about-us.css');
+@import url('./section_catalog.css');
+@import url('./section_new-watches.css');
+@import url('./section_sale.css');
+@import url('./footer.css');
+@import url('./popup.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+   --white-color: #ffffff;
+   --white-transparent-color: rgba(255, 255, 255, 0.5);
+   --black-color: #141414;
+   --dark-green-color: #1e2827;
+   --dark-gray-color: rgba(20, 20, 20, 0.5);
+   --light-gray-color: rgba(20, 20, 20, 0.4);
+   --copy-color: #c6cdd1;
+   --red: red;
+   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+   font-family: Epilogue, Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   line-height: 1.285714;
+   font-weight: normal;
+   letter-spacing: -0.02em;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+   color: var(--black-color);
+   background-color: var(--white-color);
+
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-text-size-adjust: 100%;
 }

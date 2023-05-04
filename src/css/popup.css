@@ -1,0 +1,151 @@
+/*-------------------- MODAL POPUP*/
+.backdrop {
+   display: block;
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   background: var(--dark-gray-color);
+   z-index: 98;
+   opacity: 1;
+   visibility: visible;
+   transition: 250ms var(--cubic);
+}
+.backdrop.is-hidden {
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
+}
+
+.modal {
+   display: block;
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   overflow-y: auto;
+   overflow-x: hidden;
+   opacity: 1;
+   visibility: visible;
+   z-index: 99;
+   transition: opacity 0s linear 0s, visibility 0s linear 0s, pointer-events 0s linear 0s;
+}
+.modal.is-hidden {
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0s linear 250ms, visibility 0s linear 250ms, pointer-events 0s linear 250ms;
+}
+.modal.is-hidden .popup {
+   opacity: 0;
+   transform: translate(0px, 10px);
+}
+.modal .popup__body {
+   width: 100%;
+   min-height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 18px;
+   position: relative;
+}
+.modal .popup {
+   position: relative;
+   width: 100%;
+   max-width: 904px;
+   height: auto;
+   min-height: 694px;
+   background: var(--white-color);
+   box-shadow: 0px 0px 223px rgba(0, 0, 0, 0.05), 0px 0px 130.6px rgba(0, 0, 0, 0.037963), 0px 0px 71.0296px rgba(0, 0, 0, 0.0303704),
+      0px 0px 36.2375px rgba(0, 0, 0, 0.025), 0px 0px 18.1704px rgba(0, 0, 0, 0.0196296), 0px 0px 8.77546px rgba(0, 0, 0, 0.012037);
+   border-radius: 8px;
+   opacity: 1;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   transform: translate(0px, 0px);
+   transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
+}
+
+.close-area {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.popup__close {
+   display: flex;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   justify-content: center;
+   align-items: center;
+   width: 24px;
+   height: 24px;
+   color: var(--black);
+   cursor: pointer;
+   outline: none;
+   transition: 350ms var(--cubic);
+   transform: rotate(0deg);
+   will-change: transform;
+}
+.popup__close:hover,
+.popup__close:focus,
+.popup__close:active {
+   transform: rotate(90deg);
+}
+
+#loading .popup {
+   background: rgba(0, 0, 0, 0);
+   box-shadow: none;
+   width: 100px;
+   height: 100px;
+   min-height: 100px;
+   max-width: 100px;
+   padding: 10px;
+   transform: translate(0px, 0px);
+}
+#loading .popup:before {
+   content: '';
+   position: absolute;
+   width: 60%;
+   height: 60%;
+   left: 20%;
+   top: 20%;
+   border-top: 3px solid #ffffff;
+   border-left: 3px solid #ffffff;
+   border-right: 3px solid #ffffff;
+   border-bottom: 3px solid rgba(0, 0, 0, 0);
+   border-radius: 100px;
+   -webkit-animation: 800ms linear 0s infinite rotate;
+   animation: 800ms linear 0s infinite rotate;
+}
+
+@-webkit-keyframes rotate {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+@keyframes rotate {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.rotate-animation {
+   -webkit-animation: 4s linear 0s infinite rotate;
+   animation: 4s linear 0s infinite rotate;
+}

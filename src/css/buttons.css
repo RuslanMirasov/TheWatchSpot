@@ -1,0 +1,36 @@
+.button {
+   display: inline-flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   font-size: 12px;
+   line-height: 1.2;
+   font-weight: normal;
+   padding: 18px 35px;
+   border-radius: 8px;
+   border: 1px solid var(--dark-green-color);
+   background: var(--dark-green-color);
+   color: var(--white-color);
+   text-transform: uppercase;
+   transition: 250ms var(--cubic);
+   cursor: pointer;
+}
+.button:hover,
+.button:focus {
+   border: 1px solid var(--white-color);
+}
+.button:disabled {
+   opacity: 0.5;
+   cursor: auto;
+   pointer-events: none;
+}
+
+.button.button--full {
+   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+   .button {
+      padding: 14px 28px;
+   }
+}
