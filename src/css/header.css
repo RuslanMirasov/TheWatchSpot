@@ -6,3 +6,91 @@
    z-index: 10;
    padding: 20px 0px;
 }
+
+.header-mobile {
+   display: flex;
+}
+.header-logo {
+   display: flex;
+   align-items: center;
+}
+.header-logo-text {
+   font-family: 'Epilogue';
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1;
+   letter-spacing: -0.03em;
+   color: #ffffff;
+}
+/*MOBILE*/
+@media screen and (max-width: 767px) {
+   .header-navigation {
+      display: none;
+   }
+   .button {
+      display: none;
+   }
+   .img-logo {
+      width: 14px;
+      height: 14px;
+   }
+   .header-logo-text {
+      font-size: 12px;
+   }
+   .header-logo {
+      margin-right: auto;
+   }
+   .mobile-menu-open:hover,
+   .mobile-menu-open:focus {
+      cursor: pointer;
+   }
+}
+/*TABLET*/
+@media screen and (min-width: 768px) {
+   .header-list {
+      display: flex;
+      gap: 40px;
+   }
+   .header-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: auto;
+   }
+   .img-logo {
+      width: 19px;
+      height: 19px;
+   }
+   .header-logo-text {
+      margin-right: 80px;
+   }
+   .header-link {
+      font-family: 'Epilogue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 9px;
+      line-height: 1.3;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+   }
+   .header-contact-phone {
+      font-family: 'Epilogue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 9px;
+      line-height: 12px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+   }
+   .mobile-menu-open-icon {
+      display: none;
+   }
+}
+/*DESKTOP*/
+@media screen and (min-width: 1280px) {
+   .header-logo-text {
+      font-size: 15px;
+   }
+}
