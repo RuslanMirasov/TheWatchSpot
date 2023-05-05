@@ -1,12 +1,13 @@
 @media screen and (max-width: 767px) {
-    .container-about {
+    /* .container-about {
         padding: 0px 20px;
         margin-left: auto;
         margin-right: auto;
-    }
+    } */
 
     .about-paragraf-1 {
         margin-bottom: 20px;
+        margin-top: 40px;
         font-family: 'Epilogue';
         font-style: normal;
         font-weight: 300;
@@ -40,11 +41,11 @@
 }
 
 @media screen and (min-width: 768px) {
-    .container-about {
+    /* .container-about {
         padding: 0px 20px;
         margin-left: auto;
         margin-right: auto;
-    }
+    } */
 
     .about-wrap {
         display: flex;
@@ -54,14 +55,13 @@
             font-size: 40px;
         } */
     .about-title {
-        width: 178px;
+        min-width: 214px;
         font-size: 40px;
-        margin-right: 40px;
         margin-top: 0;
     }
 
     .about-paragraf-1 {
-        width: 220px;
+        width: auto;
         margin-right: 20px;
         margin-top: 0;
         margin-bottom: 40px;
@@ -75,7 +75,7 @@
     }
 
     .about-paragraf-2 {
-        width: 250px;
+        width:  auto;
         margin-top: 0;
         margin-bottom: 40px;
         font-family: 'Epilogue';
@@ -106,15 +106,16 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .container-about {
+    /* .container-about {
         padding: 0px 20px;
         padding-left: 20px;
         margin-left: auto;
         margin-right: auto;
-    }
+    } */
 
     .about-title {
-        margin-right: 110px;
+        width: 284px;
+        /* flex-shrink: 0; */
     }
 
     .about-paragraf-1 {
