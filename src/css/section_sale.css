@@ -38,14 +38,14 @@
     font-size: 24px;
     line-height: 1;
     letter-spacing: -0.02em;
-    color: #141414;
+    color: var(--black-color);
     margin-bottom: 8px;
 }
 .sale-tag-watch {
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.02em;
-    color: rgba(20, 20, 20, 0.5);
+    color: var(--dark-gray-color);
 }
 .sale-prices {
     display: flex;
@@ -58,14 +58,14 @@
 font-size: 18px;
 line-height: 1.33;
 letter-spacing: -0.02em;
-color: #141414;
+color: var(--black-color);
 }
 .sale-old-price {
 font-size: 12px;
 line-height: 1.17;
 letter-spacing: -0.02em;
 text-decoration-line: line-through;
-color: rgba(20, 20, 20, 0.5);
+color: var(--dark-gray-color);
 }
 .sale-parag-svg {
     display: flex;
@@ -84,9 +84,9 @@ font-size: 18px;
 line-height: 1.33;
 letter-spacing: -0.02em;
 text-transform: uppercase;
-color: #141414;
+color: var(--black-color);
 margin-bottom: 17px;
-border-top: 1px solid #141414;
+border-top: 1px solid var(--black-color);
 }
 .sale-description::after {
     content: "";
@@ -96,7 +96,7 @@ border-top: 1px solid #141414;
     top: 12px;
     height: 1px;
     border-radius: 2px;
-    background-color: #141414;
+    background-color: var(--black-color);
 }
 
 .sale-pharagraf {
@@ -105,7 +105,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.29;
 letter-spacing: -0.01em;
-color: rgba(20, 20, 20, 0.5);
+color: var(--dark-gray-color);
 }
 @media screen and (min-width:768px) {
     .sale-container {

@@ -11,7 +11,7 @@ margin-right: auto;
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.02em;
-    color: #141414;
+    color: var(--black-color);
     margin-top: 14px;
 }
 .modal-clock-inf {
@@ -21,7 +21,7 @@ margin-right: auto;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: -0.02em;
-    color: rgba(20, 20, 20, 0.5);
+    color: var(--dark-gray-color);
     margin-top: 4px;
     margin-bottom: 40px;
 }
@@ -30,7 +30,7 @@ margin-right: auto;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: -0.02em;
-    color: #141414;
+    color: var(--black-color);
     margin-bottom: 12px;
 }
 .modal-input {
@@ -39,7 +39,7 @@ margin-right: auto;
     height: 42px;
     padding: 16px 12px;
     border-radius: 8px;
-    border: 1px solid rgba(20, 20, 20, 0.5);
+    border: 1px solid var(--dark-gray-color);
     margin-bottom: 18px;
 }
 
@@ -57,7 +57,7 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1.17;
 letter-spacing: -0.02em;
-color: rgba(20, 20, 20, 0.4);
+color: var(--light-gray-color);
 }
 .modal-link-policy {
  text-decoration: underline;
