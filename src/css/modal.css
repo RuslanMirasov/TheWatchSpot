@@ -14,6 +14,9 @@ margin-right: auto;
     color: #141414;
     margin-top: 14px;
 }
+.modal-clock-inf {
+    flex-shrink: 0;
+}
 .modal-price-watch {
     font-size: 12px;
     line-height: 1.17;
@@ -65,14 +68,24 @@ color: rgba(20, 20, 20, 0.4);
         gap: 20px;
        
     }
-   .modal-second-modal {
-    width: 368px;
-   }
+    .name-modal-input {
+     font-size: 14px;
+     line-height: 1.29;
+     }
+ 
 }
 @media screen and (min-width: 1280px) {
     .popup {
         gap: 40px;
     }
-        .modal-second-modal {
-            width: 508px;}
+   
+    .modal-input-first {
+        height: 49px;
+    }
+    .modal-input {
+        margin-bottom: 24px;
+    }
+  .modal-textarea {
+    margin-bottom: 40px;
+  }
 }
