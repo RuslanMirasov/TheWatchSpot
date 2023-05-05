@@ -164,10 +164,6 @@
    }
 }
 @media screen and (min-width: 1280px) {
-   .modal .popup__body {
-      padding: 188px;
-   }
-
    .popup {
       padding: 40px;
    }
