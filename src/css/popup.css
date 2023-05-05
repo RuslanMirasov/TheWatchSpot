@@ -134,9 +134,19 @@
 
 #ok .popup {
    flex-wrap: wrap;
-   gap: 20px;
-   max-width: 320px;
+   gap: 10px;
+   max-width: 340px;
    text-align: center;
+}
+
+.ok__info {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.ok-photo {
+   margin: 0 auto;
 }
 
 .popup-subtitle {
@@ -169,18 +179,24 @@
    animation: 4s linear 0s infinite rotate;
 }
 
+@media screen and (max-width: 767px) {
+   .popup__close {
+      right: 12px;
+      top: 12px;
+      width: 20px;
+      height: 20px;
+   }
+   .popup__close svg {
+      width: 20px;
+      height: 20px;
+   }
+}
 @media screen and (min-width: 768px) {
    .modal .popup__body {
       padding: 12px;
    }
    .popup {
       padding: 40px;
-   }
-   .popup__close {
-      right: 12px;
-      top: 12px;
-      width: 20px;
-      height: 20px;
    }
 }
 
