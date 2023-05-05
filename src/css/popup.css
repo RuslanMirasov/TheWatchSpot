@@ -132,6 +132,21 @@
    animation: 800ms linear 0s infinite rotate;
 }
 
+#ok .popup {
+   flex-wrap: wrap;
+   gap: 20px;
+   max-width: 320px;
+   text-align: center;
+}
+
+.popup-subtitle {
+   display: inline-block;
+   width: 100%;
+   font-size: 18px;
+   line-height: 1.2;
+   color: var(--dark-gray-color);
+}
+
 @-webkit-keyframes rotate {
    0% {
       transform: rotate(0deg);
