@@ -4,26 +4,25 @@
    </button>
    <!--modal content start-->
    <div class="modal-clock-inf">
-      <img src="./img/catalog/1.png" alt="" width="276" class="modal-photo" />
+      <img src="./img/catalog/1.png" srcset="./img/catalog/1@2x.png 2x" alt="watches" width="276" class="modal-photo" />
       <p class="modal-name-watch">Tube Watch S42 Date Steel With Black Case</p>
       <p class="modal-price-watch">€395</p>
    </div>
    <div class="modal-second-modal">
-      <form>
-         <label class="name-modal-input" for="Full name">Full name</label>
-         <input class="modal-input" id="Full name" type="text" placeholder="Enter your full name" />
-         <label class="name-modal-input" for="Email">Email</label>
-         <input class="modal-input" id="Email" type="text" placeholder="Enter your email" />
-         <label class="name-modal-input" for="Card number">Card number</label>
-         <input class="modal-input" id="Card number" type="text" placeholder="Enter card" />
-         <label class="name-modal-input" for="Comments">Comments</label>
-         <textarea class="modal-input modal-textarea" name="" id="Comments" cols="30" rows="10" placeholder="Enter your text"></textarea>
+      <form action="#" method="POST" class="form" autocomplete="off" novalidate>
+         <label class="name-modal-input" for="full_name">Full name</label>
+         <input class="modal-input" name="name" id="full_name" type="text" placeholder="Enter your full name" required />
+         <label class="name-modal-input" for="email">Email</label>
+         <input class="modal-input" name="email" id="email" type="email" placeholder="Enter your email" required />
+         <label class="name-modal-input" for="card_number">Card number</label>
+         <input class="modal-input" name="card_number" id="card_number" type="number" placeholder="Enter card" />
+         <label class="name-modal-input" for="comments">Comments</label>
+         <textarea class="modal-input modal-textarea" name="comments" id="comments" cols="30" rows="10" placeholder="Enter your text"></textarea>
+         <button type="submit" class="button button-modal">SUBMIT</button>
       </form>
-      <button type="submit" class="button button-modal">SUBMIT</button>
       <p class="modal-text-policy">
-         By clicking on “Submit” button, you agree to our <a class="modal-link-policy" href="">Privacy Policy</a>, and allow Promodo to use this information for marketing
-         purposes.
+         By clicking on “Submit” button, you agree to our <a class="modal-link-policy" href="#">Privacy Policy</a>, and allow Promodo to use this information for
+         marketing purposes.
       </p>
    </div>
-   <!--modal content end-->
 </div>
