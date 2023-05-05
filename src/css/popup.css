@@ -158,11 +158,17 @@
    .modal .popup__body {
       padding: 12px;
    }
-
    .popup {
       padding: 40px;
    }
+   .popup__close {
+      right: 12px;
+      top: 12px;
+      width: 20px;
+      height: 20px;
+   }
 }
+
 @media screen and (min-width: 1280px) {
    .popup {
       padding: 40px;
