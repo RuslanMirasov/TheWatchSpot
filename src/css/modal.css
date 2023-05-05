@@ -40,7 +40,13 @@
    padding: 16px 12px;
    border-radius: 8px;
    border: 1px solid var(--dark-gray-color);
+   transition: 250ms var(--cubic);
    margin-bottom: 18px;
+}
+
+.modal-input.red {
+   border: 1px solid var(--red);
+   color: var(--red);
 }
 
 .modal-textarea {
@@ -75,10 +81,6 @@
 @media screen and (min-width: 1280px) {
    .popup {
       gap: 40px;
-   }
-
-   .modal-input-first {
-      height: 49px;
    }
    .modal-input {
       margin-bottom: 24px;
