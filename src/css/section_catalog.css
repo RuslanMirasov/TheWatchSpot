@@ -6,7 +6,7 @@
    display: flex;
    gap: 40px;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-between;
 }
 
 .catalog-item-text {
@@ -40,8 +40,8 @@
 
 .flip-card {
    background-color: transparent;
-   width: 336px;
-   height: 360px;
+   width: 276px;
+   height: 325px;
    perspective: 1000px;
 }
 
@@ -110,7 +110,14 @@ ul.flip-card-text {
    .catalog-list {
       gap: 40px 32px;
    }
-   
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+   .flip-card,
+   .catalog-list-item {
+      width: 336px;
+      height: 360px;
+   }
 }
 
 @media screen and (min-width: 1280px) {
@@ -122,6 +129,9 @@ ul.flip-card-text {
    }
    .flip-card-back {
       padding: 20px;
+   }
+   .section-catalog .title {
+      margin-bottom: 64px;
    }
 }
 
