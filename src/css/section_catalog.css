@@ -82,7 +82,7 @@
 }
 
 .flip-card-back-item {
-   width: 236px;
+   width: auto;
 }
 
 .flip-card-title {
@@ -113,10 +113,17 @@ ul.flip-card-text {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-   .flip-card,
-   .catalog-list-item {
+   .flip-card-front img {
+      width: 276px;
+      height: 274px;
+   }
+
+   .flip-card {
       width: 336px;
       height: 360px;
+   }
+   .flip-card-back {
+      padding: 45px 40px;
    }
 }
 
@@ -133,10 +140,23 @@ ul.flip-card-text {
    .section-catalog .title {
       margin-bottom: 64px;
    }
+   .flip-card-back {
+      padding: 30px 26px;
+   }
 }
 
 @media screen and (max-width: 768px) {
    .flip-card {
       width: 100%;
+   }
+   .catalog-list-item {
+      width: 100%;
+   }
+   .flip-card-back {
+      padding: 32px;
+   }
+   .flip-card-front img {
+      width: 275px;
+      height: auto;
    }
 }
