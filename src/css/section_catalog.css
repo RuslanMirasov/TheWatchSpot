@@ -110,6 +110,7 @@ ul.flip-card-text {
    .catalog-list {
       gap: 40px 32px;
    }
+   
 }
 
 @media screen and (min-width: 1280px) {
