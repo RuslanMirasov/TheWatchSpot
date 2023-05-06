@@ -12,11 +12,15 @@
 .catalog-item-text {
    margin-bottom: 4px;
    margin-top: 14px;
-   max-width: 276px;
    font-weight: 400;
    font-size: 14px;
    line-height: 1.29;
    letter-spacing: -0.02em;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+   height: 18px;
 }
 
 .catalog-item-ptice {
@@ -117,7 +121,9 @@ ul.flip-card-text {
       width: 276px;
       height: 274px;
    }
-
+   .catalog-list-item {
+      width: 336px;
+   }
    .flip-card {
       width: 336px;
       height: 360px;
@@ -142,6 +148,9 @@ ul.flip-card-text {
    }
    .flip-card-back {
       padding: 30px 26px;
+   }
+   .catalog-list-item {
+      width: 276px;
    }
 }
 
