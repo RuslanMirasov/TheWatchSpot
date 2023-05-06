@@ -36,13 +36,100 @@
    }
    .header-logo-text {
       font-size: 12px;
+      display: flex;
    }
    .header-logo {
       margin-right: auto;
+      font-family: 'Epilogue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
    }
    .mobile-menu-open:hover,
    .mobile-menu-open:focus {
       cursor: pointer;
+   }
+   .mobile-menu-open {
+      cursor: pointer;
+   }
+   .mobile-menu {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      background: var(--black-color);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: var(--transition-duration-and-func);
+   }
+   .mobile-menu-container {
+      position: relative;
+   }
+   .mobile-menu-close-icon {
+      position: absolute;
+      transition: var(--transition-duration-and-func);
+   }
+   .mobile-menu-close-btn {
+      display: flex;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      background-color: transparent;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: border-color var(--transition-duration-and-func);
+   }
+
+   .mobile-menu.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+   }
+
+   .mobile-menu-close-btn:hover,
+   .mobile-menu-close-btn:focus {
+      transition: var(--transition-duration-and-func);
+   }
+   .mobile-menu-close-btn:hover .mobile-menu-close-icon,
+   .mobile-menu-close-btn:focus .mobile-menu-close-icon {
+      fill: var(--color-white);
+      transition: var(--transition-duration-and-func);
+   }
+   .mobile-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 200px;
+      gap: 14px;
+   }
+   .mobile-item {
+      display: flex;
+      align-items: center;
+   }
+
+   .mobile-link {
+      font-family: 'Epilogue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
    }
 }
 /*TABLET*/
