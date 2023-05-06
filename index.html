@@ -7,8 +7,8 @@
       <title>The Watch spot</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
       
-     <script type="module" crossorigin src="/project-team14/assets/index-26b9dfbd.js"></script>
-     <link rel="stylesheet" href="/project-team14/assets/styles-f412a512.css">
+     <script type="module" crossorigin src="/project-team14/assets/index-d40cc99e.js"></script>
+     <link rel="stylesheet" href="/project-team14/assets/styles-9714f04e.css">
    </head>
    <body class="body">
       <div class="preloader">
@@ -19,57 +19,32 @@
 
       <header class="header">
    <div class="container header-mobile">
-      <a class="header-logo" href="./index.html"> <img class="img-logo" src="/project-team14/assets/logo-810461eb.svg" alt="logo" /><span class="header-logo-text">thewatchspot</span></a>
+      <a class="header-logo" href="#" data-scrollto="body" data-menuClose>
+         <img class="img-logo" src="/project-team14/assets/logo-810461eb.svg" alt="logo" />
+         <span class="header-logo-text">thewatchspot</span>
+      </a>
       <nav class="header-navigation">
          <ul class="header-list">
             <li class="header-item">
-               <a class="header-link" href="#">ABOUT US</a>
+               <a href="#" class="header-link" data-scrollto="section-about" data-menuToggle>ABOUT US</a>
             </li>
             <li class="header-item">
-               <a class="header-link" href="#">CATALOG</a>
+               <a href="#" class="header-link" data-scrollto="section-catalog" data-menuToggle>CATALOG</a>
             </li>
             <li class="header-item">
-               <a class="header-link" href="#">SALE</a>
+               <a href="#" class="header-link" data-scrollto="section-sale" data-menuToggle>SALE</a>
             </li>
          </ul>
       </nav>
-      <button type="button" class="mobile-menu-open header-mobile-container" js-open-menu>
+      <button type="button" class="mobile-menu-open header-mobile-container js-burger" data-menuToggle>
          <svg class="mobile-menu-open-icon" width="24" height="24">
-            <use href="/project-team14/assets/icons-7b6e447f.svg#burger"></use>
+            <use href="/project-team14/assets/icons-7b6e447f.svg#burger" class="burger-svg"></use>
+            <use href="/project-team14/assets/icons-7b6e447f.svg#burger_close" class="close-svg"></use>
          </svg>
       </button>
       <a class="header-contact-phone button" href="tel:+380684439426">+380 (68) 443-94-26</a>
    </div>
 </header>
-<!--BURGER MENU-->
-
-<div class="mobile-menu" js-menu-container>
-   <div class="container mobile-menu-container">
-      <div class="header-mobile-container">
-         <a class="header-logo" href="./index.html"
-            ><img class="img-logo" src="/project-team14/assets/logo-810461eb.svg" alt="logo" width="19" height="19" /><span class="header-logo-text">thewatchspot</span></a
-         >
-         <button class="mobile-menu-close-btn" js-close-menu>
-            <svg class="mobile-menu-close-icon" width="24" height="24">
-               <use href="/project-team14/assets/icons-7b6e447f.svg#burger_close"></use>
-            </svg>
-         </button>
-      </div>
-      <div class="mobile-list-container">
-         <ul class="mobile-list">
-            <li class="mobile-item">
-               <a class="mobile-link" href="./index.html">ABOUT US</a>
-            </li>
-            <li class="mobile-item">
-               <a class="mobile-link" href="./index.html">CATALOG</a>
-            </li>
-            <li class="mobile-item">
-               <a class="mobile-link" href="./index.html">SALE</a>
-            </li>
-         </ul>
-      </div>
-   </div>
-</div>
 
       <main class="main">
          <section class="section">
@@ -485,7 +460,7 @@
    </div>
 </section>
 
-         <section class="section">
+         <section class="section section-sale">
    <div class="container">
       <h2 class="title">Sale</h2>
       <div class="sale-container">
