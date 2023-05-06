@@ -9,7 +9,7 @@ const bodyPadding = window.innerWidth - document.querySelector('.main').offsetWi
 const forms = document.querySelectorAll('.form');
 const inputs = document.querySelectorAll('input, textarea');
 
-const addErrorText = false;
+const addErrorText = true;
 const minSymbols = 3;
 const errorSymbols = 'Minimum characters!';
 const errorEmptyInput = 'The field must not be empty!';
@@ -82,15 +82,19 @@ function scrollbarModify() {
 inputs.forEach(input => {
    input.addEventListener('focus', function () {
       this.classList.remove('red');
-      // redInputs.forEach(redInput => {
-      //    redInput.classList.remove('red');
-      //    if (addErrorText == true && redInput.closest('.label').querySelector('.label__error') !== null) {
-      //       redInput.closest('.label').querySelector('.label__error').classList.remove('active');
-      //       setTimeout(function () {
-      //          redInput.closest('.label').querySelector('.label__error').remove();
-      //       }, 250);
-      //    }
-      // });
+      if (addErrorText == true) {
+         let nextSibling = this.nextSibling;
+         while (nextSibling && nextSibling.nodeType != 1) {
+            nextSibling = nextSibling.nextSibling;
+         }
+         let nextElementClass = nextSibling.classList[0];
+         if (nextElementClass === 'label__error') {
+            nextSibling.classList.remove('active');
+            setTimeout(function () {
+               nextSibling.remove();
+            }, 250);
+         }
+      }
    });
 });
 
@@ -109,7 +113,7 @@ forms.forEach(form => {
             popup('ok');
             formsReset();
             console.log(jsonData);
-         }, 1500);
+         }, 1000);
       }
       return false;
    });
@@ -119,55 +123,38 @@ forms.forEach(form => {
 function checkForm(formId) {
    let checker = true;
    formId.querySelectorAll('[required]').forEach(required => {
-      let requiredInput = required;
       if (required.value.length === 0) {
          addError(required, errorEmptyInput);
       } else {
-         if (requiredInput.value.length < minSymbols && requiredInput.type !== 'number') {
+         if (required.value.length < minSymbols && required.type !== 'number') {
             let minSymbolsErrorText = errorSymbols.split(' ');
             addError(required, minSymbolsErrorText[0] + ' ' + minSymbols + ' ' + minSymbolsErrorText[1]);
          } else {
             //type Name
-            if (requiredInput.name == 'name' && /[^A-zА-яЁё\+ ()\-]/.test(requiredInput.value)) {
+            if (required.name == 'name' && /[^A-zА-яЁё\+ ()\-]/.test(required.value)) {
                addError(required, errorNameInput);
             }
             //type email
-            if (requiredInput.type == 'email' && !/^[\.A-z0-9_\-\+]+[@][A-z0-9_\-]+([.][A-z0-9_\-]+)+[A-z]{1,4}$/.test(requiredInput.value)) {
+            if (required.type == 'email' && !/^[\.A-z0-9_\-\+]+[@][A-z0-9_\-]+([.][A-z0-9_\-]+)+[A-z]{1,4}$/.test(required.value)) {
                addError(required, errorEmailInput);
-            }
-            //type tel
-            if (requiredInput.type == 'tel' && /[^0-9\+ ()\-]/.test(requiredInput.value)) {
-               addError(required, errorPhoneInput);
-            }
-            //type number
-            if (requiredInput.type == 'number') {
-               if (requiredInput.min && Number(requiredInput.value) < Number(requiredInput.min)) {
-                  addError(required, errorMinNumber + ' ' + requiredInput.min);
-               }
-               if (requiredInput.max && Number(requiredInput.value) > Number(requiredInput.max)) {
-                  addError(required, errorMaxNumber + ' ' + requiredInput.max);
-               }
             }
          }
       }
 
       //ERROR TEXT CREATE
       function addError(correntLabel, text) {
-         if (addErrorText === true) {
-            let errors = correntLabel.querySelectorAll('.label__error').length;
-            if (errors < 1) {
-               correntLabel.insertAdjacentHTML('beforeend', '<div class="label__error">' + text + '</div>');
-               setTimeout(function () {
-                  correntLabel.querySelector('.label__error').classList.add('active');
-               }, 5);
+         if (!correntLabel.classList.contains('red')) {
+            if (addErrorText === true) {
+               let nextElementClass = correntLabel.nextSibling.nextSibling.classList[0];
+               if (nextElementClass !== 'label__error') {
+                  correntLabel.insertAdjacentHTML('afterEnd', '<div class="label__error">' + text + '</div>');
+                  setTimeout(function () {
+                     correntLabel.nextSibling.classList.add('active');
+                  }, 5);
+               }
             }
          }
-         checkerFalse();
-      }
-
-      //ADD "RED" CLASS TO INPUTS
-      function checkerFalse() {
-         requiredInput.classList.add('red');
+         required.classList.add('red');
          checker = false;
       }
    });

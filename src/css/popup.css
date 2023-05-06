@@ -42,7 +42,7 @@
    opacity: 0;
    transform: translate(0px, 10px);
 }
-/*  добавив відступи самої модалки */
+
 .popup {
    padding: 40px 20px 22px;
 }
@@ -156,6 +156,28 @@
    line-height: 1.2;
    color: var(--dark-gray-color);
 }
+.form {
+   position: relative;
+}
+.label__error {
+   display: inline-flex;
+   position: absolute;
+   overflow: hidden;
+   transform-origin: center top;
+   left: 0px;
+   margin-top: 44px;
+   height: 0px;
+   flex-wrap: wrap;
+   font-size: 12px;
+   line-height: 16px;
+   color: var(--red);
+   transition: 250ms var(--cubic);
+   transform: scaleY(0);
+}
+.label__error.active {
+   height: 16px;
+   transform: scaleY(1);
+}
 
 @-webkit-keyframes rotate {
    0% {
@@ -175,7 +197,6 @@
 }
 
 .rotate-animation {
-   -webkit-animation: 4s linear 0s infinite rotate;
    animation: 4s linear 0s infinite rotate;
 }
 
