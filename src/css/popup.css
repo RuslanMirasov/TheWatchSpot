@@ -42,7 +42,7 @@
    opacity: 0;
    transform: translate(0px, 10px);
 }
-/*  добавив відступи самої модалки */
+
 .popup {
    padding: 40px 20px 22px;
 }
@@ -132,6 +132,53 @@
    animation: 800ms linear 0s infinite rotate;
 }
 
+#ok .popup {
+   flex-wrap: wrap;
+   gap: 10px;
+   max-width: 340px;
+   text-align: center;
+}
+
+.ok__info {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.ok-photo {
+   margin: 0 auto;
+}
+
+.popup-subtitle {
+   display: inline-block;
+   width: 100%;
+   font-size: 18px;
+   line-height: 1.2;
+   color: var(--dark-gray-color);
+}
+.form {
+   position: relative;
+}
+.label__error {
+   display: inline-flex;
+   position: absolute;
+   overflow: hidden;
+   transform-origin: center top;
+   left: 0px;
+   margin-top: 44px;
+   height: 0px;
+   flex-wrap: wrap;
+   font-size: 12px;
+   line-height: 16px;
+   color: var(--red);
+   transition: 250ms var(--cubic);
+   transform: scaleY(0);
+}
+.label__error.active {
+   height: 16px;
+   transform: scaleY(1);
+}
+
 @-webkit-keyframes rotate {
    0% {
       transform: rotate(0deg);
@@ -150,22 +197,27 @@
 }
 
 .rotate-animation {
-   -webkit-animation: 4s linear 0s infinite rotate;
    animation: 4s linear 0s infinite rotate;
 }
 
+@media screen and (max-width: 767px) {
+   .popup__close {
+      right: 12px;
+      top: 12px;
+      width: 20px;
+      height: 20px;
+   }
+   .popup__close svg {
+      width: 20px;
+      height: 20px;
+   }
+}
 @media screen and (min-width: 768px) {
    .modal .popup__body {
       padding: 12px;
    }
    .popup {
       padding: 40px;
-   }
-   .popup__close {
-      right: 12px;
-      top: 12px;
-      width: 20px;
-      height: 20px;
    }
 }
 
