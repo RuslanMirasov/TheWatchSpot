@@ -1,28 +1,18 @@
-(() => {
-  const mobileMenu = document.querySelector('[js-menu-container]');
-  const openMenuBtn = document.querySelector('[js-open-menu]');
-  const closeMenuBtn = document.querySelector('[js-close-menu]');
+const menuToggleElements = document.querySelectorAll('[data-menuToggle]');
+const menuCloseElements = document.querySelectorAll('[data-menuClose]');
+const burger = document.querySelector('.js-burger');
+const mobilMenu = document.querySelector('.header-navigation');
 
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('is-open');
+menuToggleElements.forEach(menuToggleTrigger => {
+   menuToggleTrigger.addEventListener('click', function () {
+      burger.classList.toggle('is-open');
+      mobilMenu.classList.toggle('is-open');
+   });
+});
 
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
-  };
-
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
-
-  // Close the mobile menu on wider screens if the device orientation changes
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
-  });
-})();
+menuCloseElements.forEach(menuCloseTrigger => {
+   menuCloseTrigger.addEventListener('click', function () {
+      burger.classList.remove('is-open');
+      mobilMenu.classList.remove('is-open');
+   });
+});
