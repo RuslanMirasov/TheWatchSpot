@@ -1,0 +1,151 @@
+.hero-section {
+   background: var(--black-color);
+   color: var(--white-color);
+   padding-top: 122px;
+}
+
+.hero {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   width: 100%;
+   position: relative;
+   gap: 40px 20px;
+}
+.hero-title {
+   max-width: 750px;
+   font-weight: 600;
+   font-size: 60px;
+   line-height: calc(62 / 60);
+   letter-spacing: -0.04em;
+   order: 1;
+}
+.hero-text {
+   font-weight: 300;
+   max-width: 248px;
+   margin-left: auto;
+   order: 3;
+}
+.hero-top-slider {
+   order: 2;
+   position: relative;
+   width: 436px;
+}
+.hero-slider {
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   height: 255px;
+   background: var(--dark-green-color);
+}
+
+.hero-slider img {
+   height: 100%;
+   width: 100%;
+}
+
+.slider-arrows {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.swiper-arrows {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border: 1px solid var(--white-color);
+   border-radius: 8px;
+   opacity: 0.5;
+   cursor: pointer;
+   margin-right: 12px;
+   transition: opacity 250ms var(--cubic);
+}
+
+.swiper-arrows svg {
+   width: 24px;
+   height: 24px;
+}
+
+.swiper-arrows:hover,
+.swiper-arrows:focus {
+   opacity: 1;
+}
+.swiper-next {
+   margin-right: auto;
+}
+
+.swiper-number {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.slide-first {
+   display: flex;
+   align-items: center;
+}
+.slide-first:after {
+   content: '';
+   display: block;
+   width: 32px;
+   height: 1px;
+   margin: 0px 8px;
+   background: var(--white-color);
+}
+.hero-image {
+   order: 4;
+}
+
+@media screen and (max-width: 767px) {
+   .hero-title {
+      max-width: 653px;
+      font-size: 38px;
+      line-height: calc(40 / 38);
+   }
+   .hero-top-slider {
+      width: 266px;
+   }
+   .hero-slider {
+      height: 200px;
+   }
+   .swiper-arrows {
+      width: 32px;
+      height: 32px;
+   }
+   .swiper-arrows svg {
+      width: 18px;
+      height: 18px;
+   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+   .hero-section {
+      padding-top: 146px;
+   }
+   .hero-text {
+      padding-bottom: 60px;
+   }
+}
+
+@media screen and (min-width: 1280px) {
+   .hero-section {
+      padding-top: 148px;
+   }
+   .hero-text {
+      order: 2;
+      max-width: 282px;
+      align-self: flex-start;
+   }
+   .hero-image {
+      margin-left: auto;
+   }
+   .hero-top-slider {
+      align-self: flex-end;
+   }
+}
