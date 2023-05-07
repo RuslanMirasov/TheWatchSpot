@@ -1,4 +1,4 @@
-const slideCounter = document.querySelector('.slide-select');
+const slideCounter = document.querySelector('.slide-first');
 var swiper = new Swiper('.hero-slider', {
    speed: 600,
    loop: true,
