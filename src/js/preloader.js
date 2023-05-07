@@ -1,3 +1,4 @@
+AOS.init();
 const preloader = document.querySelector('.preloader');
 window.addEventListener('load', () => {
    setTimeout(function () {
