@@ -1,3 +1,28 @@
 <header class="header">
-   <div class="container">header</div>
+   <div class="container header-mobile">
+      <a class="header-logo" href="#" data-scrollto="body" data-menuClose>
+         <img class="img-logo" src="./img/logo.svg" alt="logo" />
+         <span class="header-logo-text">thewatchspot</span>
+      </a>
+      <nav class="header-navigation">
+         <ul class="header-list">
+            <li class="header-item">
+               <a href="#" class="header-link" data-scrollto="section-about" data-menuToggle>ABOUT US</a>
+            </li>
+            <li class="header-item">
+               <a href="#" class="header-link" data-scrollto="section-catalog" data-menuToggle>CATALOG</a>
+            </li>
+            <li class="header-item">
+               <a href="#" class="header-link" data-scrollto="section-sale" data-menuToggle>SALE</a>
+            </li>
+         </ul>
+      </nav>
+      <button type="button" class="mobile-menu-open header-mobile-container js-burger" data-menuToggle>
+         <svg class="mobile-menu-open-icon" width="24" height="24">
+            <use href="./img/icons.svg#burger" class="burger-svg"></use>
+            <use href="./img/icons.svg#burger_close" class="close-svg"></use>
+         </svg>
+      </button>
+      <a class="header-contact-phone button" href="tel:+380684439426">+380 (68) 443-94-26</a>
+   </div>
 </header>

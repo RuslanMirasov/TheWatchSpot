@@ -6,3 +6,154 @@
    z-index: 10;
    padding: 20px 0px;
 }
+
+.header-mobile {
+   display: flex;
+}
+
+.header-logo {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   position: relative;
+   z-index: 2;
+}
+
+.header-logo-text {
+   font-weight: 400;
+   line-height: 1;
+   letter-spacing: -0.03em;
+   color: var(--white-color);
+}
+
+.header-link:hover,
+.header-link:focus {
+   transition: var(--cubic);
+}
+
+.header-navigation {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: auto;
+}
+
+.header-list {
+   display: flex;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 767px) {
+   .header {
+      padding: 0;
+   }
+   .header-mobile {
+      max-width: 767px;
+   }
+   .header-navigation {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      background: var(--dark-green-color);
+      transition: 600ms var(--cubic);
+      transform: translate(0%, -100%);
+      z-index: 1;
+   }
+   .header-navigation.is-open {
+      transform: translate(0%, 0%);
+   }
+   .header-list {
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+   }
+   .header-link {
+      display: block;
+      text-align: center;
+   }
+   .header-contact-phone {
+      display: none;
+   }
+   .img-logo {
+      width: 14px;
+      height: 14px;
+   }
+   .header-logo {
+      margin-right: auto;
+   }
+   .header-logo-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--white-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .mobile-menu-open .burger-svg {
+      display: block;
+   }
+   .mobile-menu-open .close-svg {
+      display: none;
+   }
+   .mobile-menu-open.is-open .burger-svg {
+      display: none;
+   }
+   .mobile-menu-open.is-open .close-svg {
+      display: block;
+   }
+   .header-mobile-container {
+      display: flex;
+      align-items: center;
+      padding: 29px 0;
+      position: relative;
+      z-index: 2;
+   }
+}
+/*TABLET*/
+@media screen and (min-width: 768px) {
+   .header-list {
+      display: flex;
+      gap: 40px;
+   }
+
+   .img-logo {
+      width: 19px;
+      height: 19px;
+   }
+   .header-logo {
+      margin-right: 80px;
+   }
+   .header-link {
+      font-weight: 400;
+      font-size: 9px;
+      line-height: 1.3;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--white-color);
+   }
+   .header-contact-phone {
+      font-weight: 400;
+      font-size: 9px;
+      line-height: calc(12 / 9);
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--white-color);
+   }
+   .mobile-list {
+      display: none;
+   }
+   .mobile-menu-open-icon {
+      display: none;
+   }
+}
+/*DESKTOP*/
+@media screen and (min-width: 1280px) {
+   .header-logo-text {
+      font-size: 15px;
+   }
+}
