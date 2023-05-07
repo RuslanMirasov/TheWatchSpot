@@ -1,0 +1,156 @@
+
+.footer {
+   width: 100%;
+   background: var(--dark-green-color);
+   color: var(--white-color);
+   padding: 40px 0px 20px 0px;
+}
+
+.container-menu {
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 131px;
+   font-size: 14px;
+   line-height: 1.29;
+   color: var(--white-color);
+}
+
+.footer-address {
+   display: block;
+}
+
+.address-logo {
+   display: block;
+   margin-bottom: 40px;
+}
+
+.address-img {
+   width: 40px;
+   height: 40px;
+}
+
+.address-phone {
+   display: block;
+   margin-bottom: 20px;
+}
+
+.address-text {
+   display: block;
+   letter-spacing: -0.02em;
+}
+
+.footer-nav {
+   display: block;
+   letter-spacing: -0.02em;
+}
+
+.nav-item:not(:last-child) {
+   margin-bottom: 14px;
+}
+
+.social-list {
+   display: flex;
+   align-items: center;
+}
+
+.social-item {
+   width: 40px;
+   height: 40px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+   margin-top: 20px;
+   margin-bottom: 40px;
+}
+.social-item:not(:last-child) {
+   margin-right: 14px;
+}
+
+.social-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+}
+
+.footer-text {
+   font-size: 12px;
+   line-height: 1.17;
+   letter-spacing: -0.02em;
+   color: #C6CDD1;
+}
+
+.text-text {
+   margin-bottom: 14px;
+}
+
+.text-privacy {
+   display: flex;
+   align-items: center;
+}
+
+.privacy {
+   margin-right: 14px;
+}
+
+@media screen and (min-width: 768px) {
+   .footer {
+      padding: 80px 0px 20px 0px;
+   }
+   
+   .container-menu {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 152px;
+      font-size: 18px;
+      line-height: 1.33;
+   }
+
+   .address-img {
+      width: 50px;
+      height: 50px;
+   }
+   .nav-item:not(:last-child) {
+      margin-bottom: 18px;
+   }
+   .social-item {
+      margin-top: 0px;
+      margin-bottom: 0px;
+   }
+   .social-item {
+      width: 44px;
+      height: 44px;
+   }
+   .social-item:not(:last-child) {
+      margin-right: 16px;
+   }
+
+   .footer-text {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1.29;
+   }
+   .text-text {
+      margin-bottom: 0px;
+   }
+   .privacy {
+      margin-right: 18px;
+   }
+}
+
+@media screen and (min-width: 1280px) {
+   .footer {
+         padding: 104px 0px 32px 0px;
+      }
+   
+      .container-menu {
+         margin-bottom: 174px;
+      }
+         
+      .footer-text {
+         gap: 680px;
+      }
+}
