@@ -1,6 +1,6 @@
 const menuToggleElements = document.querySelectorAll('[data-menuToggle]');
 const menuCloseElements = document.querySelectorAll('[data-menuClose]');
-const burger = document.querySelector('.js-burger');
+const burger = document.querySelector('.burger');
 const mobilMenu = document.querySelector('.header-navigation');
 
 menuToggleElements.forEach(menuToggleTrigger => {

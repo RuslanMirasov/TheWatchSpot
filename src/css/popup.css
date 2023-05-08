@@ -59,7 +59,6 @@
 .modal .popup {
    position: relative;
    width: 100%;
-   max-width: 904px;
    height: auto;
    background: var(--white-color);
    box-shadow: 0px 0px 223px rgba(0, 0, 0, 0.05), 0px 0px 130.6px rgba(0, 0, 0, 0.037963), 0px 0px 71.0296px rgba(0, 0, 0, 0.0303704),
@@ -211,6 +210,9 @@
       width: 20px;
       height: 20px;
    }
+   .modal .popup {
+      max-width: 375px;
+   }
 }
 @media screen and (min-width: 768px) {
    .modal .popup__body {
@@ -219,10 +221,16 @@
    .popup {
       padding: 40px;
    }
+   .modal .popup {
+      max-width: 720px;
+   }
 }
 
 @media screen and (min-width: 1280px) {
    .popup {
       padding: 40px;
+   }
+   .modal .popup {
+      max-width: 904px;
    }
 }

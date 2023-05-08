@@ -44,6 +44,10 @@
    margin-bottom: 18px;
 }
 
+.modal-input:focus {
+   border: 1px solid var(--black-color);
+}
+
 .modal-input.red {
    border: 1px solid var(--red);
    color: var(--red);
