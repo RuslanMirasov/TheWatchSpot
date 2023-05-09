@@ -1,4 +1,6 @@
-/* ====================альбомчик================ */
+.section-sale img {
+   width: 100%;
+}
 .parent {
    display: grid;
    grid-template-columns: 23.885% 70.15%;
@@ -30,8 +32,6 @@
 .div5 {
    grid-area: 1 / 2 / 5 / 3;
 }
-
-/* ====================альбомчик================ */
 
 .sale-name-watch {
    font-weight: 400;
