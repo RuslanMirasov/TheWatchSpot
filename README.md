@@ -1,3 +1,1 @@
-# TheWatchSpot - GOIT Team project
-
-![project poster](./assets/poster.png)
+![project poster](./assets/poster.jpg)
